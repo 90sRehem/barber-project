@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES6"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "pretty": true,
+    "types": [
+      "node",
+      "jest"
+    ],
+    "target": "es2017",
+    "module": "commonjs",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "packages/**/**/*"
+  ]
+}
