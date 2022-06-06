@@ -168,6 +168,6 @@ export class Contract extends Notifiable {
   }
 
   protected Result(Property: string, Message: string): void {
-    this.AddNotification({ Property, Message });
+    this.AddNotification(Property, Message);
   }
 }
