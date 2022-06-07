@@ -10,18 +10,26 @@ let invalidNotificationUsingObjectArray: InvalidNotificationUsingObjectArray;
 
 describe("Notifications tests", () => {
   beforeAll(() => {
-    // invalidNotificationUsingPropAndMsg = new InvalidNotificationUsingPropAndMsg();
-    // invalidNotificationUsingObject = new InvalidNotificationUsingObject();
-    // invalidNotificationUsingObjectArray = new InvalidNotificationUsingObjectArray();
+    invalidNotificationUsingPropAndMsg = new InvalidNotificationUsingPropAndMsg();
+    invalidNotificationUsingObject = new InvalidNotificationUsingObject();
+    invalidNotificationUsingObjectArray = new InvalidNotificationUsingObjectArray();
   });
 
   it("Should be able to add a notification with property e message", () => {
     // expect(invalidNotificationUsingObject).toHaveProperty("Invalid", true);
-    expect(true).toBe(true);
+    expect(false).toBe(true);
   });
 
-  // it("Should be able to add a notification with notification class", () => { });
-  // it("Should return error", () => { });
-  // it("Should be able to add a notification with a contract", () => { });
-  // it("Should be able to add a notification with an array of notifications", () => { });
+  it("Should be able to add a notification with notification class", () => {
+    expect(false).toBe(true);
+  });
+  it("Should return error", () => {
+    expect(false).toBe(true);
+  });
+  it("Should be able to add a notification with a contract", () => {
+    expect(false).toBe(true);
+  });
+  it("Should be able to add a notification with an array of notifications", () => {
+    expect(false).toBe(true);
+  });
 });
