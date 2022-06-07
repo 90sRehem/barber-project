@@ -1,7 +1,8 @@
 import { Contract } from "@barber-project/validations";
+import { INotifiable } from "./INotifiable";
 import { Notification } from "./Notification";
 
-export abstract class Notifiable {
+export abstract class Notifiable implements INotifiable {
   private _notifications: Array<Notification> = new Array<Notification>();
 
   /**
@@ -23,10 +24,10 @@ export abstract class Notifiable {
 
   public AddNotification(property: string, message: string): void;
   public AddNotification(notification: Notification): void;
-  public AddNotification(notifications: Array<Notification>): void;
+  // public AddNotification(notifications: Array<Notification>): void;
   public AddNotification(Contract: Contract): void;
   public AddNotification(
-    property?: string | Notification | Array<Notification> | Contract,
+    property?: string | Notification | Contract,
     message?: string,
   ): void {
     if (property instanceof Notification) {
@@ -43,7 +44,9 @@ export abstract class Notifiable {
       const newNotification = new Notification(property, message);
       this._notifications.unshift(newNotification);
     }
+  }
 
-    this._notifications.unshift(...(property as Array<Notification>));
+  public AddNotifications(notifications: Array<Notification>): void {
+    this._notifications.unshift(...notifications);
   }
 }
