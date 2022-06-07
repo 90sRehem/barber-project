@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
