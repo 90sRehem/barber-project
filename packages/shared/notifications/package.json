@@ -5,5 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "@barber-project/validations": "*"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
