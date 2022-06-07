@@ -14,7 +14,8 @@ export class Name extends ValueObject<INameProps> {
     super(props);
     this.AddNotification(new Contract()
       .IsRequired()
-      .IsLengthLessThan(this.FirstName, 40, "Name.FirstName", "Nome deve conter no máximo 40 carecteres"));
+      .IsNotNullOrEmptyString(this.FirstName, "Name.FirstName", "O nome é obrigatório!")
+      .HasMinLength(this.FirstName, 3, "Name.FirstName", "Nome deve conter no mínimo 3 carecteres!"));
   }
 
   public get Name(): string {

@@ -14,8 +14,9 @@ export class Password extends ValueObject<IPasswordProps> {
   constructor(props: IPasswordProps) {
     super(props);
     this.AddNotification(new Contract()
-      .IsRequired()
-      .IsLengthLessThan(
+      // .IsRequired()
+      .IsNotNullOrEmptyString(this.props.value, "Password.Value", "O password é obrigatório!")
+      .HasMinLength(
         this.props.value,
         6,
         "Password.Value",
