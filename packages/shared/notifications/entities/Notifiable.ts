@@ -4,10 +4,6 @@ import { Notification } from "./Notification";
 
 export abstract class Notifiable implements INotifiable {
   private _notifications: Array<Notification> = new Array<Notification>();
-
-  /**
-   *
-   */
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() { }
 
@@ -15,8 +11,13 @@ export abstract class Notifiable implements INotifiable {
     return this._notifications.map((x) => x.Message);
   }
 
-  public Invalid = (): boolean => this._notifications.length > 0;
-  public Valid = (): boolean => this._notifications.length <= 0;
+  public get Invalid(): boolean {
+    return this._notifications.length > 0;
+  }
+
+  public get Valid(): boolean {
+    return this._notifications.length <= 0;
+  }
 
   public get GetNotifications(): Array<Notification> {
     return this._notifications;
@@ -24,7 +25,6 @@ export abstract class Notifiable implements INotifiable {
 
   public AddNotification(property: string, message: string): void;
   public AddNotification(notification: Notification): void;
-  // public AddNotification(notifications: Array<Notification>): void;
   public AddNotification(Contract: Contract): void;
   public AddNotification(
     property?: string | Notification | Contract,

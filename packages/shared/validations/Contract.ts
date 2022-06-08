@@ -1,8 +1,12 @@
-import { Notifiable } from "@barber-project/notifications";
+import { Notification } from "@barber-project/notifications";
 
-export class Contract extends Notifiable {
-  constructor() {
-    super();
+export class Contract {
+  private _notifications: Array<Notification> = new Array<Notification>();
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  constructor() { }
+
+  public get GetNotifications(): Array<Notification> {
+    return this._notifications;
   }
 
   public IsRequired() {
@@ -168,6 +172,6 @@ export class Contract extends Notifiable {
   }
 
   protected Result(property: string, message: string): void {
-    this.AddNotification(property, message);
+    this._notifications.unshift(new Notification(property, message));
   }
 }
