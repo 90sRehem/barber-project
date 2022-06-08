@@ -1,4 +1,4 @@
-import { Notifiable } from "../Notifiable";
+import { Notifiable } from "../entities";
 
 export class InvalidNotificationUsingPropAndMsg extends Notifiable {
   constructor() {
@@ -6,4 +6,3 @@ export class InvalidNotificationUsingPropAndMsg extends Notifiable {
     this.AddNotification("InvalidUsingString.test", "Notificação de teste");
   }
 }
-console.log(new InvalidNotificationUsingPropAndMsg().Valid());

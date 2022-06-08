@@ -1,5 +1,4 @@
-import { Notifiable } from "../Notifiable";
-import { Notification } from "../Notification";
+import { Notifiable, Notification } from "../entities";
 
 export class InvalidNotificationUsingObjectArray extends Notifiable {
   constructor() {

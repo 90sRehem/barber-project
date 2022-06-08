@@ -1,5 +1,4 @@
-import { Notifiable } from "../Notifiable";
-import { Notification } from "../Notification";
+import { Notifiable, Notification } from "../entities";
 
 export class InvalidNotificationUsingObject extends Notifiable {
   constructor() {
@@ -10,6 +9,3 @@ export class InvalidNotificationUsingObject extends Notifiable {
     ));
   }
 }
-
-// const teste = new InvalidNotificationUsingObject().Valid()
-console.log(new InvalidNotificationUsingObject());

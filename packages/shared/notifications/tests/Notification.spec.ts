@@ -15,21 +15,20 @@ describe("Notifications tests", () => {
     invalidNotificationUsingObjectArray = new InvalidNotificationUsingObjectArray();
   });
 
-  it("Should be able to add a notification with property e message", () => {
-    // expect(invalidNotificationUsingObject).toHaveProperty("Invalid", true);
-    expect(false).toBe(true);
+  it("Should return invalid passing property, message and must contain one notification", () => {
+    expect(invalidNotificationUsingPropAndMsg.Invalid).toBe(true);
+    expect(invalidNotificationUsingPropAndMsg.GetNotifications).toHaveLength(1);
   });
 
-  it("Should be able to add a notification with notification class", () => {
-    expect(false).toBe(true);
+  it("Should return invalid passing notification object and must contain one notification", () => {
+    expect(invalidNotificationUsingObject.Invalid).toBe(true);
+    expect(invalidNotificationUsingObject.GetNotifications).toHaveLength(1);
   });
-  it("Should return error", () => {
-    expect(false).toBe(true);
+  it("Should return invalid passing an notification array and must contain three notifications", () => {
+    expect(invalidNotificationUsingObjectArray.Invalid).toBe(true);
+    expect(invalidNotificationUsingObjectArray.GetNotifications).toHaveLength(3);
   });
-  it("Should be able to add a notification with a contract", () => {
-    expect(false).toBe(true);
-  });
-  it("Should be able to add a notification with an array of notifications", () => {
-    expect(false).toBe(true);
+  it("Should return an array with messages", () => {
+    expect(invalidNotificationUsingObjectArray.Messages).toHaveLength(3);
   });
 });
