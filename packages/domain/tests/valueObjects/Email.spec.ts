@@ -9,14 +9,14 @@ describe("Email test", () => {
     validEmail = new Email({ address: "johndoe@email.com" });
   });
   it("Should return error if email is empty.", () => {
-    expect(invalidEmail.Invalid()).toBe(true);
+    expect(invalidEmail.Invalid).toBe(true);
   });
 
   it("Should return error when email is invalid", () => {
-    expect(invalidEmail.Invalid()).toBe(true);
+    expect(invalidEmail.Invalid).toBe(true);
   });
 
   it("Should return success when email is valid.", () => {
-    expect(validEmail.Valid()).toBe(true);
+    expect(validEmail.Valid).toBe(true);
   });
 });
