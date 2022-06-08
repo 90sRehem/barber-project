@@ -1,12 +1,14 @@
+import { Notifiable } from "@barber-project/notifications";
 import { UniqueId } from "./UniqueId";
 
-export abstract class Entity<T> {
+export abstract class Entity<T> extends Notifiable {
   protected readonly _id: UniqueId;
   public readonly _props: T;
   /**
    * This class takes responsibility for generating the id, creation date and update date.
    */
   constructor(props: T, id?: UniqueId) {
+    super();
     this._id = id || new UniqueId();
     this._props = props;
   }

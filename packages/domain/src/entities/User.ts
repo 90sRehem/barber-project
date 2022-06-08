@@ -20,6 +20,9 @@ export class User extends Entity<IUserProps> {
    */
   constructor(props: IUserProps, id?: UniqueId) {
     super(props, id);
+    this.AddNotifications(this.Email.GetNotifications);
+    this.AddNotifications(this.Name.GetNotifications);
+    this.AddNotifications(this.Password.GetNotifications);
   }
 
   public get Name(): Name {
