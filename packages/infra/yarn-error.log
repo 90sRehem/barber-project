@@ -1,0 +1,39 @@
+Arguments: 
+  /home/rehem/.nvm/versions/node/v16.15.1/bin/node /usr/bin/yarn
+
+PATH: 
+  /home/rehem/.vscode-server/bin/4af164ea3a06f701fe3e89a2bcbb421d2026b68f/bin/remote-cli:/home/rehem/.nvm/versions/node/v16.15.1/bin:/home/rehem/.zinit/polaris/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Jonat/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Jonat/AppData/Local/Programs/Hyper/resources/bin:/mnt/c/Users/Jonat/AppData/Local/Programs/Microsoft VS Code/bin:/home/rehem/Android/Sdk/emulator:/home/rehem/Android/Sdk/tools:/home/rehem/Android/Sdk/tools/bin:/home/rehem/Android/Sdk/platform-tools:/home/rehem/android-studio/bin:/home/rehem/Android/Sdk/emulator:/home/rehem/Android/Sdk/tools:/home/rehem/Android/Sdk/tools/bin:/home/rehem/Android/Sdk/platform-tools:/home/rehem/android-studio/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.15.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/rehem/projects/barber-project/packages/infra/package.json: Unexpected token } in JSON at position 136
+      at JSON.parse (<anonymous>)
+      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "infra",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+      "@barber-project/domain"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

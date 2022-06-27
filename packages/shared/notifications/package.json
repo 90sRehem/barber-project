@@ -1,12 +1,13 @@
 {
   "name": "@barber-project/notifications",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "@barber-project/validations": "*"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rimraf ./dist && swc src --out-dir dist"
   }
 }

@@ -2,7 +2,7 @@ import {
   InvalidNotificationUsingObject,
   InvalidNotificationUsingObjectArray,
   InvalidNotificationUsingPropAndMsg,
-} from "../mocks";
+} from "../src/mocks";
 
 let invalidNotificationUsingPropAndMsg: InvalidNotificationUsingPropAndMsg;
 let invalidNotificationUsingObject: InvalidNotificationUsingObject;

@@ -1,7 +1,7 @@
 {
   "name": "@barber-project/domain",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "@barber-project/notifications": "*",
@@ -13,6 +13,7 @@
     "@types/bcrypt": "^5.0.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rimraf ./dist && swc src --out-dir dist"
   }
 }

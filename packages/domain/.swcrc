@@ -1,0 +1,20 @@
+{
+  "jsc": {
+    "externalHelpers": false,
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": true,
+      "dynamicImport": false
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true
+    },
+    "target": "es2017",
+    "baseUrl": "./src"
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}
